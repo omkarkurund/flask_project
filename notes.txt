@@ -1,0 +1,41 @@
+To create virtual Environment steps:-
+1)pip install virtualenv
+2)virtualenv env
+
+
+**Remember**
+static and templates folder created seperately...
+
+
+1)static --- is used to add the data and video or another material in the static file
+
+2)templates -- is used to store the or render the data in like files include .html etc
+
+
+
+
+
+
+stylesheets:-
+my-4 means vertical margin 4
+mh-4 means horizontal margin 4
+
+mb-3 margin bottom
+
+
+
+ to craete the database
+
+above try not working then run below commands:-
+
+from app import db,app
+>>> app.app_context().push()
+>>> db.create_all()
+
+
+env\Scripts\activate
+
+
+pip freeze > requirements.txt - to list all modeule in require to run this project
+
+pip install gunicorn
