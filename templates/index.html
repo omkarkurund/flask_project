@@ -42,34 +42,30 @@
     </div>
     
     {% endif %}
-     {% for t in alltodo %}
-        <thead>
-          <tr>
-            <th scope="col">srNo</th>
-            <th scope="col">Title</th>
-            <th scope="col">Description</th>
-            <th scope="col">Time</th>
-          </tr>
-        </thead>
-        <tbody>
+    <thead>
+      <tr>
+        <th scope="col">srNo</th>
+        <th scope="col">Title</th>
+        <th scope="col">Description</th>
+        <th scope="col">Time</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for t in alltodo %}
           <tr>
             <th scope="row">{{loop.index}}</th>
             <td>{{t.title}}</td>
             <td>{{t.desc}}</td>
             <td>{{t.date_created}}</td>
-            <td>
+            <td style="display: inline-block;">
+
               <a
                 href="/update/{{t.sno}}"
                 type="button"
-                class="btn btn-outline-dark btn-sm mx-1"
+                class="btn btn-outline-dark btn-sm"
                 >update</a
-              >
-              <a
-                href="/delete/{{t.sno}}"
-                type="button"
-                class="btn btn-outline-dark btn-sm mx-1"
-                >Delete</a
-              >
+              > <a href="/delete/{{t.sno}}" type="button" class="btn btn-outline-dark btn-sm ">Delete</a>
+
             </td>
           </tr>
           {% endfor %}

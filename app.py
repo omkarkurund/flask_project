@@ -32,10 +32,8 @@ def Home():
         todo = Todo(title=title,desc=desc)
         db.session.add(todo)
         db.session.commit()
-
     alltodo=Todo.query.all()
     return render_template('index.html',alltodo=alltodo)
-
 
 
 @app.route('/update/<int:sno>',methods=["GET","POST"])
